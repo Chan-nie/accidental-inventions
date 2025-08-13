@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--
+        Contest: Inventions
+    
+        I have completed 95% of Khan Academy's 
+        'Intro to Webpages' and have been programming for 15 months.
+    
+        I would prefer to be placed in the
+        [Beginner] bracket
+        
+        Credits: 
+        Info- https://bestlifeonline.com/accidental-inventions/
+        KA community for their feedback, which helped me improve this webpage. Thank you all.
+-->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Accidental Inventions </title>
+	
+	<!--google fonts and icons-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Tapestry&family=Merriweather+Sans&family=Cedarville+Cursive&family=Splash&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	
+	<style>
+	/*body and animations*/
+	* {
+		margin: 0;
+		scroll-behavior: smooth;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideIn {
+		from {
+			transform: translateX(-220px);
+		}
+
+		to {
+			transform: translateX(0px);
+		}
+	}
+
+	/*Google icons*/
+	.material-symbols-outlined {
+		font-variation-settings:
+			'FILL' 1,
+			'wght' 400,
+			'GRAD' 0,
+			'opsz' 0;
+		font-size: 20em;
+		margin: auto 30px;
+		user-select: none;
+	}
+
+	/*navigation bar*/
+	#navbar {
+		user-select: none;
+		position: fixed;
+		padding: 20px 0px;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background-blend-mode: multiply;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-bottom: 5px solid white;
+	}
+
+	#navbar a {
+		font-family: 'Merriweather Sans', sans-serif;
+		text-decoration: none;
+		padding: 20px 20px;
+		color: white;
+		transition: 0.2s;
+	}
+
+	#navbar a:hover {
+		color: pink;
+	}
+
+	/*user-select colours*/
+	::selection {
+		background: lightgrey;
+		color: navy;
+	}
+
+	/*scrollbar*/
+	::-webkit-scrollbar {
+		display: block;
+		background: none;
+		width: 15px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: teal;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgb(235, 235, 235);
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #2C4770;
+	}
+
+	/*content*/
+	.page {
+		line-height: 40px;
+		text-align: justify;
+		margin: 10px;
+		margin-top: 75px;
+		animation: fadeIn 0.5s ease-out;
+	}
+
+	/*header*/
+	header {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Arduino_ftdi_chip-1.jpg/440px-Arduino_ftdi_chip-1.jpg"), linear-gradient(pink, orange, azure);
+		height: 100vh;
+		color: white;
+		user-select: none;
+		margin: -10px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-blend-mode: multiply;
+		user-select: none;
+		margin-top: -75px;
+		margin-bottom: 10px;
+	}
+
+	header h1 {
+		font-size: 50px;
+		line-height: 60px;
+		font-family: 'Tapestry', cursive;
+		text-align: center;
+		padding: 270px 0px 39px 0px;
+		border-top: rgb(0, 105, 88) groove 8px;
+		margin: 0px 0px 0px 263px;
+		background-blend-mode: multiply;
+		background: linear-gradient(to left, rgba(179, 0, 0, 0.8), transparent);
+	}
+
+	/*page*/
+	.page p {
+		margin: 20px;
+	}
+
+	/*links*/
+	a {
+		color: #B52B65;
+	}
+
+	a:hover {
+		color: teal;
+	}
+
+	a:visited {
+		color: #ED6663;
+	}
+
+	/*Inventions Information*/
+	.info {
+		background: rgb(245, 245, 245);
+		padding: 50px;
+		margin: 10px 30px 50px -10px;
+		border-left: solid 5px;
+	}
+
+	.info .material-symbols-outlined {
+		margin: 65px 30px;
+		border-radius: 50px;
+		background: #f5f5f5;
+		box-shadow: 20px 20px 60px #d0d0d0,
+			-20px -20px 60px #ffffff;
+		transition: 0.5s ease-out;
+	}
+
+	/*msg to the community*/
+	.msg {
+		transform: rotate(-5deg);
+		border: 5px double #B8E8FC;
+		margin: 50px;
+		color: #554994;
+		box-shadow: 10px 10px 20px #9cc5d6,
+			-10px -10px 20px #d4ffff;
+		font-size: 25px;
+	}
+
+	/*headings font*/
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Merriweather Sans', sans-serif;
+	}
+
+	/*scroll to top*/
+	#top {
+		transition: 0.5s;
+	}
+
+	#top:hover {
+		transform: translateY(-10px);
+		border: 2px solid rgba(255, 255, 255, 0.1);
+		border-radius: 5rem;
+	}
+
+	/*about links*/
+	#profile {
+		animation: slideIn 1.5s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#project {
+		animation: slideIn 2s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#blog {
+		animation: slideIn 2.5s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#profile:hover,
+	#project:hover,
+	#blog:hover {
+		color: #6A67CE;
+		transform: translateY(-5px);
+	}
+
+	#profile:visited,
+	#project:visited,
+	#blog:visited {
+		color: #400D51;
+	}
+    
+	.about a {
+		font-size: 70px;
+		text-decoration: none;
+		text-align: center;
+		margin: 25px 57px;
+		border-radius: 50px;
+		background: #f7f7f7;
+		box-shadow: 4px 4px 2px #d2d2d2;
+	}
+
+	.card {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1rem;
+	}
+	
+	/*horizontal line separator*/
+	hr {
+		border-color: pink;
+		border-radius: 2px;
+		width: 30%;
+		margin: auto;
+		-webkit-filter: blur(2px);
+	}
+
+	/*footer*/
+	footer {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 40px;
+		text-align: center;
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Schneeflocken_in_Deutschland_-_20100102.jpg/560px-Schneeflocken_in_Deutschland_-_20100102.jpg"), linear-gradient(to left, #439A97, #F1F6F5, azure);
+		background-blend-mode: multiply;
+		user-select: none;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0px 90px;
+		background-attachment: fixed;
+		color: white;
+		padding: 5em;
+		line-height: 30px;
+		user-select: none;
+	}
+
+	footer a,
+	footer p {
+		color: white;
+		text-decoration: none;
+		padding: 0.5em;
+		transition: 0.5s;
+	}
+
+	footer a:hover {
+		transform: translateY(-5px);
+		color: white;
+	}
+
+	footer a:visited {
+		color: azure;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+	<!--navigation bar-->
+	<div id="navbar">
+		<a href="javascript:changePage(1);">Home</a>
+		<a href="javascript:changePage(2);">Inventions</a>
+		<a href="javascript:changePage(3);">Credits</a>
+	</div>
+	
+	<!--Home Page-->
+	<div class="page">
+		<header>
+			<h1>Accidental Inventions</h1>
+		</header>
+		<p>There are some inventions that we use on a daily basis. Also these inventions have been very useful to us in many ways. Ranging from satisying your tastebuds to saving lives. In this webpage we will see the top 5 popular accidental inventions. This webpage is for the <a href="https://www.khanacademy.org/computer-programming/contest-inventions-html-submissions/6487037691084800" style="text-decoration:none;"> Contest: Inventions - HTML Submissions.</a>
+		</p>
+	</div>
+	
+	<!--accidental inventions list-->
+	<div class="page">
+		<p>Here goes a list of accidental inventions. There are many more accidental inventions but these are some of popular ones. I hope you find them interesting! You can click on the icons for more information.</p>
+		
+		<ol>
+			<!--sticky notes-->
+			<div class="info" style="border-color: #FF8DC7;">
+				<li>
+					<h3>Sticky notes </h3>
+				</li>
+				<a href="https://en.wikipedia.org/wiki/Post-it_Note"><span class="material-symbols-outlined" style="color: #FF8DC7;"> sticky_note_2 </span></a>
+				<p>Sticky notes are something that we use a lot. A 3M scientist Dr. Spencer Silver was doing research on strong adhesives when he came across quite the reverse: one that stuck lightly to surfaces but didn't bond tightly to them. Years later another 3M scientist, Art Fry, came to him to create a bookmark that could stick to paper without damaging it. Eventually, that bookmark became the post-it note.</p>
+			</div>
+			
+			<!--chocolate chip cookies (yummm...)-->
+			<div class="info" style="border-color: #632626;">
+				<li>
+					<h3>Chocolate chip cookies</h3>
+				</li>
+				<a href="https://en.wikipedia.org/wiki/Chocolate_chip_cookie"><span class="material-symbols-outlined" style="color: #632626;"> cookie </span></a>
+				<p>Ruth Wakefield and her husband owned and operated the Toll House Inn in Massachusetts where Ruth cooked for the guests. According to legend, one day in 1937 while making cookie dough, she realized she was out of melting baker’s chocolate and instead used a chocolate bar that she chopped into bits, hoping it would melt as well. It didn’t, and thus was born America's favorite cookie. </p>
+			</div>
+			
+			<!--penicillin-->
+			<div class="info" style="border-color: #D45D79;">
+				<li>
+					<h3>Penicillin</h3>
+				</li>
+				<a href="https://en.wikipedia.org/wiki/Penicillin"><span class="material-symbols-outlined" style="color: #D45D79;"> mixture_med </span></a>
+				<p>Penicillin- the most famous lifesaving discovery. Discovered in 1928, Penicillin was one of the world's first antibiotics. Alexander Fleming, a Scottish scientist, found a mold in one of the petri dishes containing the staphylococci bacteria after leaving it for a few days in the open. The mold had formed a sterile shield around itself killing the bacteria in the dish. He decided to study further on these bacteria and hence invented penicillin. </p>
+			</div>
+			
+			<!--X-ray machine-->
+			<div class="info" style="border-color: #AEEFF0;">
+				<li>
+					<h3>The X-ray Machine</h3>
+				</li>
+				<a href="https://en.wikipedia.org/wiki/X-ray"><span class="material-symbols-outlined" style="color: #AEEFF0;"> rib_cage </span></a>
+				<p>On November 8, 1895, physicist Wilhelm Conrad Rontgen was in his laboratory in Wurzburg, Germany, experimenting on a vacuum tube covered in cardboard when he noticed a mysterious glow emanating from a chemically coated screen nearby. Confused and intrigued, he named the new rays causing this glow X-rays due to their unknown origin—and after playing around some more with the new rays, he discovered that putting his hand in front of the glow allowed him to see past his skin to his bones, thus leading to the world's first X-ray. </p>
+			</div>
+			
+			<!--Ice-cream-->
+			<div class="info" style="border-color: #93C572;">
+				<li>
+					<h3>Ice cream cone </h3>
+				</li>
+				<a href="https://en.wikipedia.org/wiki/Ice_cream"><span class="material-symbols-outlined" style="color: #93C572;"> icecream </span></a>
+				<p>In 1904 at St. Louis World's Fair, an ice cream vendor ran out of dishes to serve his ice cream in, the vendor next to him named Ernest A. Hamwi, came up with the idea to shape his crêpes into cones as vessels for the frozen treat. Thus was born the ice cream cone. Do you like ice creams in cones or cups? </p>
+			</div>
+		</ol>
+	</div>
+	
+	<!--credits page-->
+	<div class="page">
+		<h2>Credits</h2>
+		<p>Information-<a href="https://bestlifeonline.com/accidental-inventions/"> https://bestlifeonline.com/accidental-inventions/</a></p>
+		<p>KA community - <span style="color: grey;">for their feedback, which helped me improve this webpage. Thank you all.</span></p>
+		<hr>
+		<br>
+		
+		<!--some links-->
+		<h2>About</h2>
+		<span class="about">
+			<a href="https://www.khanacademy.org/profile/suva06" class="material-symbols-outlined" title="profile" id="profile">account_circle</a>
+			<a href="https://www.khanacademy.org/profile/suva06/projects" class="material-symbols-outlined" title="projects" id="project">article</a>
+			<a href="https://www.khanacademy.org/computer-programming/my-blog/5309682150752256" class="material-symbols-outlined" title="blog" id="blog">border_color</a>
+		</span>
+		<div class="card">
+			<p style="text-align: center;">Profile</p>
+			<p style="text-align: center;">Projects</p>
+			<p style="text-align: center;">Blog</p>
+		</div>
+		<br>
+		<hr>
+		<br>
+		
+		<!--Msg to the community. Thanks all-->
+		<div class="msg">
+			<p style="font-family: 'Cedarville Cursive', cursive;">Thank you so much for viewing this webpage. I hope you found this interesting. If you liked this project then please let me know in the tips and thanks below. Also please feel free to give constructive criticism. Please check out the above links. Once again, Thank you very much and have a great day!</p>
+			<p style="font-family: 'Splash', cursive;">-Blue Snow ❄️</p>
+		</div>
+		<br>
+	</div>
+	
+	<!--footer-->
+	<footer>
+		<p>Thank you<br> Made with 🤍 <br> By: Blue Snow </p>
+		
+		<!--scroll to top-->
+		<span id="top" class="material-symbols-outlined" style="cursor: pointer; font-size: 58px" onClick="window.scrollTo({top: 0, behavior: 'smooth'})">arrow_circle_up</span>
+		
+		<!--Page links-->
+		<span>
+			<h3>Pages</h3>
+			<a href="javascript:changePage(1)">Home</a><br>
+			<a href="javascript:changePage(2)">Inventions</a><br>
+			<a href="javascript:changePage(3)">Credits</a>
+		</span>
+	</footer>
+	
+	<!--switch page function-->
+	<script>
+	var page = document.getElementsByClassName('page');
+
+	function changePage(index) {
+		for (var i = 0; i < page.length; i++) {
+			page[i].style.display = 'none';
+		}
+		page[index - 1].style.display = 'block';
+		window.scroll(0, 0);
+	}
+	changePage(1);
+	</script>
+	
+</body>
+
+</html>
