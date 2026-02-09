@@ -1,0 +1,287 @@
+	/*body and animations*/
+	* {
+		margin: 0;
+		scroll-behavior: smooth;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideIn {
+		from {
+			transform: translateX(-220px);
+		}
+
+		to {
+			transform: translateX(0px);
+		}
+	}
+
+	/*Google icons*/
+	.material-symbols-outlined {
+		font-variation-settings:
+			'FILL' 1,
+			'wght' 400,
+			'GRAD' 0,
+			'opsz' 0;
+		font-size: 20em;
+		margin: auto 30px;
+		user-select: none;
+	}
+
+	/*navigation bar*/
+	#navbar {
+		user-select: none;
+		position: fixed;
+		padding: 20px 0px;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background-blend-mode: multiply;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-bottom: 5px solid white;
+	}
+
+	#navbar a {
+		font-family: 'Merriweather Sans', sans-serif;
+		text-decoration: none;
+		padding: 20px 20px;
+		color: white;
+		transition: 0.2s;
+	}
+
+	#navbar a:hover {
+		color: pink;
+	}
+
+	/*user-select colours*/
+	::selection {
+		background: lightgrey;
+		color: navy;
+	}
+
+	/*scrollbar*/
+	::-webkit-scrollbar {
+		display: block;
+		background: none;
+		width: 15px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: teal;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgb(235, 235, 235);
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #2C4770;
+	}
+
+	/*content*/
+	.page {
+		line-height: 40px;
+		text-align: justify;
+		margin: 10px;
+		margin-top: 75px;
+		animation: fadeIn 0.5s ease-out;
+	}
+
+	/*header*/
+	header {
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Arduino_ftdi_chip-1.jpg/440px-Arduino_ftdi_chip-1.jpg"), linear-gradient(pink, orange, azure);
+		height: 100vh;
+		color: white;
+		user-select: none;
+		margin: -10px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-blend-mode: multiply;
+		user-select: none;
+		margin-top: -75px;
+		margin-bottom: 10px;
+	}
+
+	header h1 {
+		font-size: 50px;
+		line-height: 60px;
+		font-family: 'Tapestry', cursive;
+		text-align: center;
+		padding: 270px 0px 39px 0px;
+		border-top: rgb(0, 105, 88) groove 8px;
+		margin: 0px 0px 0px 263px;
+		background-blend-mode: multiply;
+		background: linear-gradient(to left, rgba(179, 0, 0, 0.8), transparent);
+	}
+
+	/*page*/
+	.page p {
+		margin: 20px;
+	}
+
+	/*links*/
+	a {
+		color: #B52B65;
+	}
+
+	a:hover {
+		color: teal;
+	}
+
+	a:visited {
+		color: #ED6663;
+	}
+
+	/*Inventions Information*/
+	.info {
+		background: rgb(245, 245, 245);
+		padding: 50px;
+		margin: 10px 30px 50px -10px;
+		border-left: solid 5px;
+	}
+
+	.info .material-symbols-outlined {
+		margin: 65px 30px;
+		border-radius: 50px;
+		background: #f5f5f5;
+		box-shadow: 20px 20px 60px #d0d0d0,
+			-20px -20px 60px #ffffff;
+		transition: 0.5s ease-out;
+	}
+
+	/*msg to the community*/
+	.msg {
+		transform: rotate(-5deg);
+		border: 5px double #B8E8FC;
+		margin: 50px;
+		color: #554994;
+		box-shadow: 10px 10px 20px #9cc5d6,
+			-10px -10px 20px #d4ffff;
+		font-size: 25px;
+	}
+
+	/*headings font*/
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Merriweather Sans', sans-serif;
+	}
+
+	/*scroll to top*/
+	#top {
+		transition: 0.5s;
+	}
+
+	#top:hover {
+		transform: translateY(-10px);
+		border: 2px solid rgba(255, 255, 255, 0.1);
+		border-radius: 5rem;
+	}
+
+	/*about links*/
+	#profile {
+		animation: slideIn 1.5s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#project {
+		animation: slideIn 2s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#blog {
+		animation: slideIn 2.5s ease-out;
+		color: #B8405E;
+		transition: 0.5s;
+	}
+
+	#profile:hover,
+	#project:hover,
+	#blog:hover {
+		color: #6A67CE;
+		transform: translateY(-5px);
+	}
+
+	#profile:visited,
+	#project:visited,
+	#blog:visited {
+		color: #400D51;
+	}
+    
+	.about a {
+		font-size: 70px;
+		text-decoration: none;
+		text-align: center;
+		margin: 25px 57px;
+		border-radius: 50px;
+		background: #f7f7f7;
+		box-shadow: 4px 4px 2px #d2d2d2;
+	}
+
+	.card {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1rem;
+	}
+	
+	/*horizontal line separator*/
+	hr {
+		border-color: pink;
+		border-radius: 2px;
+		width: 30%;
+		margin: auto;
+		-webkit-filter: blur(2px);
+	}
+
+	/*footer*/
+	footer {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 40px;
+		text-align: center;
+		background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Schneeflocken_in_Deutschland_-_20100102.jpg/560px-Schneeflocken_in_Deutschland_-_20100102.jpg"), linear-gradient(to left, #439A97, #F1F6F5, azure);
+		background-blend-mode: multiply;
+		user-select: none;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0px 90px;
+		background-attachment: fixed;
+		color: white;
+		padding: 5em;
+		line-height: 30px;
+		user-select: none;
+	}
+
+	footer a,
+	footer p {
+		color: white;
+		text-decoration: none;
+		padding: 0.5em;
+		transition: 0.5s;
+	}
+
+	footer a:hover {
+		transform: translateY(-5px);
+		color: white;
+	}
+
+	footer a:visited {
+		color: azure;
+	}
